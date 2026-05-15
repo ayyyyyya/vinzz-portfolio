@@ -1,0 +1,31 @@
+{
+  "name": "vinzz-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev --host 0.0.0.0 --port 3000",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "serve": "serve .output/public -l tcp://127.0.0.1:3000",
+    "preview": "nuxt preview --host 0.0.0.0 --port 3000",
+    "deploy": "bash deploy.sh",
+    "pm2:start": "pm2 start npm --name vinzz-portfolio -- run serve",
+    "pm2:restart": "pm2 restart vinzz-portfolio",
+    "pm2:stop": "pm2 stop vinzz-portfolio",
+    "pm2:logs": "pm2 logs vinzz-portfolio",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "latest",
+    "lucide-vue-next": "latest",
+    "nuxt": "latest",
+    "serve": "latest",
+    "tailwindcss": "latest",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest"
+  }
+}
